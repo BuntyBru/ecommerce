@@ -9,7 +9,8 @@ import { auth } from "./Firebase";
 import { useStateValue } from "./StateProvider";
 
 function App() {
-  const [{}, dispatch] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
+  console.log(basket, user);
 
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
@@ -29,7 +30,7 @@ function App() {
       }
     });
     return () => {};
-  }, []);
+  }, [dispatch]);
   return (
     <Router>
       <div className="App">
