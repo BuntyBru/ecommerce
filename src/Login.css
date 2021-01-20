@@ -39,6 +39,8 @@
   background-color: white;
   width: 98%;
   border: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .login__signInButton,
